@@ -8,6 +8,7 @@ url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap')
     font-family: 'Inter', sans-serif;
 }
 
+
 .row {
     width: 100%;
     max-width: 1200px;
@@ -16,22 +17,43 @@ url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap')
 
 .logo {
     width: 40px;
+    margin-right: 12px;
+}
+
+.logo__title {
+    font-size: 24px;
+    font-weight: 900;
 }
 
 img {
     width: 100%;
 }
 
-.nav {
+ul {
+    display: flex;
+}
+
+nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.nav__links {
+li {
     list-style-type: none
 }
 
-.nav__link {
+a {
     text-decoration: none;
+}
+
+.nav__link {
+    margin: 0 24px;
+    padding-bottom: 4px;
+    font-size: 14px;
+}
+
+.nav__link:hover {
+    text-decoration: underline;
+    
 }
