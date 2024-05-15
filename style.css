@@ -86,6 +86,10 @@ nav {
     padding: 12px 32px;
 }
 
+h5 {
+    font-size: 16px;
+}
+
 
 
 /* 
@@ -112,23 +116,24 @@ header {
     max-width: 1280px;
     padding: 0 32px;
     width: 100%;
+    
 }
 
 .header__description {
     min-width: 550px;
     width: 100%;
+    flex: 4;
 }
 
 
 .header__title {
-    font-size: 30px;
+    font-size: 48px;
     font-weight: 700;
-    text-align: center;
+
 }
 
 .header__para {
     font-size: 18px;
-    text-align: center;
     line-height: 27px;
     margin: 32px 0;
 }
@@ -189,5 +194,116 @@ header {
 .header__img--wrapper {
     display: flex;
     align-items: center;
+    flex: 6;
     max-width: 768px;
+}
+
+
+/*
+
+FEATURES
+
+*/
+
+.features__container {
+    position: relative;
+    padding: 96px 0;
+}
+
+.features__title {
+    margin-bottom: 16px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    display: flex;
+    justify-content: center;
+}
+
+.features__subtitle {
+    font-size: 48px;
+    color: #243e63;
+    font-weight: 900;
+}
+
+.features__para {
+    width: 100%;
+    text-align: center;
+    margin-top: 16px;
+    margin-bottom: 40px;
+    max-width: 576px;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 30px;
+    color: #7c8ba1;
+}
+
+.service__row {
+    width: 100%;
+    max-width: 1024px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+.features__row {
+    display: flex;
+    flex-direction: column;
+}
+
+.feature__description--wrapper {
+    margin-top: 8px;
+    margin-left: 16px;
+}
+
+.features__description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.features__service--wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.feature__service {
+    padding: 32px 24px;
+    width: calc(100% / 3);
+    display: flex;
+    align-items: flex-start;
+}
+
+.img__wrapper {
+    border: 1px solid;
+    border: rgb(226, 232, 240);
+    flex-shrink: 0;
+    border-radius: 500px;
+    border-width: 1px;
+    padding: 20px;
+    text-align: center;   
+}
+
+.img__feature {
+    width: 24px;
+    height: 24px;
+}
+
+.feature__description--wrapper {
+    margin-top: 8px;
+    margin-left: 16px;
+}
+
+.service__title {
+    color: #243e63;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1;
+    letter-spacing: .4px;
+}
+
+.service__para {
+    color: #7c8ba1;
+    margin-top: 16px;
+    font-weight: 500;
+    line-height: 2;
+    text-align: left;
 }
