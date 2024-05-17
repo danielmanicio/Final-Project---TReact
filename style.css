@@ -210,10 +210,28 @@ FEATURES
     padding: 96px 0;
 }
 
+.service__row {
+    width: 100%;
+    max-width: 1024px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+.features__row {
+    flex-direction: column;
+}
+
+.features__description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .features__title {
     margin-bottom: 16px;
     font-weight: 700;
-    letter-spacing: 1.5px;
+    letter-spacing: 1.5;
     display: flex;
     justify-content: center;
 }
@@ -229,40 +247,30 @@ FEATURES
     text-align: center;
     margin-top: 16px;
     margin-bottom: 40px;
-    max-width: 576px;
     font-size: 18px;
     font-weight: 500;
     line-height: 30px;
     color: #7c8ba1;
 }
 
-.service__row {
-    width: 100%;
-    max-width: 1024px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-}
-
-.features__row {
-    display: flex;
-    flex-direction: column;
-}
-
-.feature__description--wrapper {
-    margin-top: 8px;
-    margin-left: 16px;
-}
-
-.features__description {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
 .features__service--wrapper {
     display: flex;
     flex-wrap: wrap;
+}
+
+.img__wrapper {
+    border: 1px solid;
+    border-color: rgb(226, 232, 240);
+    flex-shrink: 0;
+    border-radius: 500px;
+    border-width: 1px;
+    padding: 20px;
+    text-align: center;
+}
+
+.img__feature {
+    width: 24px;
+    height: 24px;
 }
 
 .feature__service {
@@ -272,24 +280,9 @@ FEATURES
     align-items: flex-start;
 }
 
-.img__wrapper {
-    border: 1px solid;
-    border: rgb(226, 232, 240);
-    flex-shrink: 0;
-    border-radius: 500px;
-    border-width: 1px;
-    padding: 20px;
-    text-align: center;   
-}
-
-.img__feature {
-    width: 24px;
-    height: 24px;
-}
-
 .feature__description--wrapper {
     margin-top: 8px;
-    margin-left: 16px;
+    margin-left: 16px
 }
 
 .service__title {
@@ -303,6 +296,7 @@ FEATURES
 .service__para {
     color: #7c8ba1;
     margin-top: 16px;
+    font-size: 16px;
     font-weight: 500;
     line-height: 2;
     text-align: left;
