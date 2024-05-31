@@ -301,3 +301,45 @@ FEATURES
     line-height: 2;
     text-align: left;
 }
+
+
+/*
+
+QUALITY
+
+*/
+
+.quality__container {
+    padding: 96px 0;
+}
+
+.row {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+.quality__row {
+    display: flex;
+}
+
+.quality__description {
+    width: 100vh;
+    margin-right: 72px;
+}
+
+.quality__title {
+    font-size: 16px;
+    text-align: left;
+    letter-spacing: 1.5px;
+    margin-bottom: 16px;
+}
+
+.quality__subtitle {
+    font-size: 48px;
+    color: #243e63;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
