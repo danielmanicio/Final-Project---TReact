@@ -450,3 +450,105 @@ STEPS
     margin-top: 12px;
     max-width: 320px;
 }
+
+/*
+
+VALUES
+
+*/
+
+.values__container {
+    padding: 96px 0;
+}
+
+.values__description {
+    width: 40%;
+}
+
+.values__title {
+    text-align: left;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 1.6px;
+    margin-bottom: 16px;
+}
+
+.values__subtitle {
+    font-size: 48px;
+    font-weight: 900;
+    line-height: 60px;
+    text-align: left;
+    color: #243e63;
+}
+
+.values__para {
+    font-size: 16px;
+    line-height: 30px;
+    text-align: left;
+    color: #7c8ba1;
+    font-weight: 500;
+    margin-top: 32px;
+}
+
+.values__principles--wrapper {
+    display: flex;
+}
+
+.values__principle {
+    display: flex;
+    flex-direction: column;
+    margin: 32px 32px 0 0;
+}
+
+.values__principle--header {
+    display: flex;
+    align-items: center;
+}
+
+.values__dollar-sign {
+    background-color: rgb(154, 230, 180);
+    border-radius: 500px;
+    padding: 6px;
+    color: rgb(39, 103, 73);
+    display: flex;
+}
+
+.values__principle--title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-left: 12px;
+    color: #243e63;
+}
+
+.values__principle--description {
+    line-height: 1.5;
+    color: #718096;
+    margin: 16px 0;
+}
+
+.values__briefcase {
+    background-color: rgb(254, 178, 178);
+    padding: 6px;
+    border-radius: 500px;
+    color: rgb(155, 44, 44);
+    display: flex;
+}
+
+.values__button {
+    color: #fff;
+    background-color: #6415ff;
+    padding: 12px 32px;
+    border: none;
+    border-radius: 500px;
+    margin-top: 32px;
+    font-weight: 700;
+    transition: 500ms ease;
+    cursor: not-allowed;
+}
+
+.values__img {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    padding-left: 80px;
+}
