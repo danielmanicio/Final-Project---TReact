@@ -569,6 +569,13 @@ PRICING
     flex-direction: column;
 }
 
+.pricing__wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+
 .pricing__description {
     display: flex;
     flex-direction: column;
@@ -603,7 +610,8 @@ PRICING
     color: #7c8ba1;
 }
 
-.pricing__personal {
+.pricing__personal,
+.pricing__enterprise {
     margin-top: 64px;
     margin-right: 32px;
     width: 100%;
@@ -619,23 +627,35 @@ PRICING
     border-top-right-radius: 8px;
 }
 
-.personal__top {
+.personal__top,
+.business__top,
+.enterprise__top {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 32px 0;
+}
+
+.personal__top,
+.enterprise__top {
     border-bottom: 2px solid #e5e7eb;
 }
 
-.personal__title {
+.business__top {
+    border-bottom: 2px solid #fff;
+}
+
+.personal__title,
+.enterprise__title {
     font-size: 20px;
     font-weight: 700;
     color: #242424;
     margin-bottom: 4px;
 }
 
-.personal__subtitle {
+.personal__subtitle, 
+.enterprise__subtitle {
     font-size: 48px;
     color: #242424;
     font-weight: 700;
@@ -643,13 +663,15 @@ PRICING
     line-height: 78px;
 }
 
-.personal__monthly {
+.personal__monthly,
+.enterprise__monthly {
     color: rgb(160, 174, 192);
     letter-spacing: 1.6px;
     font-weight: 700px;
 }
 
-.personal__middle {
+.personal__middle,
+.enterprise__middle {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -657,14 +679,16 @@ PRICING
     border-bottom: 2px solid #e5e7eb;
 }
 
-.personal__middle--title {
+.personal__middle--title,
+.enterprise__middle--title {
     font-size: 20px;
     color: #242424;
     font-weight: 700;
     text-align: center;
 }
 
-.personal__middle--description {
+.personal__middle--description,
+.enterprise__middle--description {
     margin-top: 20px;
     font-size: 16px;
     font-weight: 500;
@@ -672,7 +696,8 @@ PRICING
     color: #718096;
 }
 
-.personal__bottom {
+.personal__bottom,
+.enterprise__bottom {
     display: flex;
     justify-content: center;
     padding: 32px;
@@ -682,6 +707,10 @@ PRICING
 
 .price__button--personal {
     background: linear-gradient(115deg, rgb(56, 178, 172) 0%, rgb(129, 230, 217) 100%);
+}
+
+.price__button--personal,
+.price__button--enterprise {
     padding: 16px 40px;
     border: none;
     border-radius: 50px;
@@ -689,18 +718,84 @@ PRICING
     font-weight: 700;
     color: #fff;
     letter-spacing: 0.8;
-    transition: all 500mx ease;
+    transition: all 500ms ease;
     cursor: not-allowed;
 }
 
-.pricing__enterprise {
+.pricing__business {
     margin-top: 64px;
     margin-right: 32px;
     width: 100%;
     max-width: 384px;
-    box-shadow: 0 0 10px 1px rgba(0, 0, 0, .05);
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.05);
+    background-image: linear-gradient(135deg, rgb(76, 81, 191) 0%, rgb(102,126,234) 100%);
     border-radius: 8px;
 }
+
+.business__title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 4px;
+}
+
+.business__subtitle {
+    font-size: 48px;
+    color: #fff;
+    font-weight: 700;
+    margin-bottom: 4px;
+    line-height: 78px;
+}
+
+.business__monthly {
+    color: #fff;
+    letter-spacing: 1.6px;
+    font-weight: 700px;
+}
+
+.business__middle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 32px;
+    border-bottom: 2px solid #fff;
+}
+
+.business__middle--title {
+    font-size: 20px;
+    color: #fff;
+    font-weight: 700;
+    text-align: center;
+}
+
+.business__middle--description {
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    color: #fff;
+}
+
+.business__bottom {
+    display: flex;
+    justify-content: center;
+    padding: 32px;
+}
+
+.price__button--business {
+    padding: 16px 40px;
+    border: none;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #6415ff;
+    letter-spacing: 0.8px;
+    transition: all 500ms ease;
+    cursor: not-allowed;
+}
+
+
+
 
 .enterprise__color {
     height: 8px;
@@ -709,76 +804,13 @@ PRICING
     border-top-right-radius: 8px;
 }
 
-.enterprise__top {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 32px 0;
-    border-bottom: 2px solid #e5e7eb;
-}
-
-.enterprise__title {
-    font-size: 20px;
-    font-weight: 700;
-    color: #242424;
-    margin-bottom: 4px;
-}
-
-.enterprise_subtitle {
-    font-size: 48px;
-    color: #242424;
-    font-weight: 700;
-    margin-bottom: 4px;
-    line-height: 78px;
-}
-
-.enterprise__monthly {
-    color: rgb(160, 174, 192);
-    letter-spacing: 1.6px;
-    font-weight: 700px;
-}
-
-.enterprise__middle {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 32px;
-    border-bottom: 2px solid #e5e7eb;
-}
-
-.enterprise__middle--title {
-    font-size: 20px;
-    color: #242424;
-    font-weight: 700;
-    text-align: center;
-}
-
-.enterprise__middle--description {
-    margin-top: 20px;
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 24px;
-    color: #718096;
-}
-
-.enterprise__bottom {
-    display: flex;
-    justify-content: center;
-    padding: 32px;
-    border-bottom-left-radius: 8px;
-    border-top-right-radius: 8px;
-}
-
 .price__button--enterprise {
     background: linear-gradient(115deg, rgb(245, 101, 101) 0%, rgb(254, 178, 178) 100%);
-    padding: 16px 40px;
-    border: none;
-    border-radius: 50px;
-    font-size: 14px;
-    font-weight: 700;
-    color: #fff;
-    letter-spacing: 0.8;
-    transition: all 500mx ease;
-    cursor: not-allowed;
 }
+
+
+/*
+
+TESTIMONIALS
+
+*/
