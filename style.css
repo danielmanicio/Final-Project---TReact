@@ -13,6 +13,10 @@ main {
     overflow-x: hidden;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 .row {
     width: 100%;
     max-width: 1280px;
@@ -42,22 +46,155 @@ ul {
     color: #6415ff;
 }
 
+.button__hover {
+    cursor: pointer;
+}
 
-/* 
+.cursor__not-allowed {
+    cursor: not-allowed;
+}
+
+@keyframes slideFromRight {
+    0% {
+        transform: translate(100vw);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideFromLeft {
+    from {
+        transform: translate(-100vw) ;
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/*
+
+Menu
+
+*/
+
+.btn__menu {
+    background-color: transparent;
+    font-size: 20px;
+    text-align: center;
+    border: none;
+    color: #000;
+    display: none;
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+  }
+  
+  .btn__menu:hover {
+    color: #6415ff;
+  }
+  
+  .menu--open {
+    max-height: 100vh;
+    overflow-y: hidden;
+  }
+  
+  .btn__backdrop {
+    position: absolute;
+    background-color: #ffffff;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 24px 16px;
+    padding: 32px;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #d8d9db;
+    border-radius: 10px;
+    transition: all 500ms ease;
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  
+  .menu--open .btn__backdrop {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  .menu__links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .menu__list {
+    margin: 10px 0;
+    padding-bottom: 8px;
+  }
+  
+  .menu__link {
+    font-size: 18px;
+    font-weight: 500;
+    color: #000;
+    transition: all 700ms ease;
+  }
+  
+  .menu__link--purple {
+    background-color: #6415ff;
+    color: #fff;
+    padding: 12px 32px;
+    margin: 8px 0;
+    font-size: 18px;
+    border-radius: 50px;
+    font-weight: 500;
+  }
+  
+  .menu__link:hover {
+    color: rgb(65, 12, 172);
+    text-decoration: 2px underline;
+  }
+  
+  .menu__link--purple:hover {
+    background-color: rgb(65, 12, 172);
+    color: #fff;
+  }
+  
+  .btn__menu--close {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    padding: 8px;
+    color: #6415ff;
+  }
+  
+  
+
+/*
 
 NAVIGATION
 
 */
 
+#landing {
+    animation: slideFromLeft 900ms ease
+}
+
 .nav__container {
     width: 100%;
     max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     margin: 0 auto;
-}
-
-.logo {
-    width: 40px;
-    margin-right: 12px;
 }
 
 .nav__logo--wrapper {
@@ -66,23 +203,37 @@ NAVIGATION
     margin-right: 24px;
 }
 
+.logo {
+    width: 40px;
+    height: 40px;
+    margin-right: 12px;
+}
 
-nav {
+.nav__title {
+    color: #243e63;
+    font-size: 24px;
+    font-weight: 900;
+}
+
+.nav__links {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
 }
 
 .nav__link {
+    padding: 0 0 4px;
     margin: 0 24px;
-    padding-bottom: 4px;
     font-size: 14px;
+    color: #243e63;
     font-weight: 600;
 }
 
+.nav__link:hover {
+    border-bottom: 2px solid #6415ff;
+    color: #6415ff;
+}
+
 .login {
-    display: flex;
-    margin-left: 32px;
+    margin: 0 12px 0 32px;
 }
 
 .nav__link--primary {
@@ -93,6 +244,13 @@ nav {
     font-weight: 550;
     padding: 12px 32px;
 }
+
+.nav__link--primary:hover {
+    color: #fff;
+    text-decoration: none;
+    background-color: rgb(65, 12, 172);
+}
+
 
 h5 {
     font-size: 16px;
@@ -116,6 +274,7 @@ header {
     max-width: 1280px;
     padding: 96px 0;
     display: flex;
+    position: relative;
 }
 
 .header__row {
@@ -125,6 +284,7 @@ header {
     padding: 0 32px;
     width: 100%;
     
+
 }
 
 .header__description {
@@ -180,6 +340,12 @@ header {
     font-weight: 700px;
 }
 
+.header__button:hover {
+        color: #fff;
+        text-decoration: none;
+        background-color: rgb(65, 12, 172);
+    }
+
 .header__customers--wrapper {
     margin-top: 80px;
     width: 100%;
@@ -212,6 +378,9 @@ header {
 FEATURES
 
 */
+#features {
+    animation: slideFromRight 900ms ease;
+}
 
 .features__container {
     position: relative;
@@ -317,6 +486,10 @@ QUALITY
 
 */
 
+#quality {
+    animation: slideFromLeft 900ms ease;
+}
+
 .quality__container {
     padding: 96px 0;
 }
@@ -377,6 +550,10 @@ QUALITY
 STEPS
 
 */
+
+#steps {
+    animation: slideFromRight 900ms ease;
+}
 
 .steps__container {
     padding: 96px 0;
@@ -456,6 +633,10 @@ STEPS
 VALUES
 
 */
+
+#values {
+    animation: slideFromLeft 900ms ease;
+}
 
 .values__container {
     padding: 96px 0;
@@ -794,9 +975,6 @@ PRICING
     cursor: not-allowed;
 }
 
-
-
-
 .enterprise__color {
     height: 8px;
     background: linear-gradient(115deg, rgb(245, 101, 101) 0%, rgb(254, 178, 178) 100%);
@@ -814,6 +992,10 @@ PRICING
 TESTIMONIALS
 
 */
+
+#testimonial {
+    animation: slideFromLeft 900ms ease
+}
 
 .testimonial__container {
     padding: 96px 0;
@@ -917,6 +1099,10 @@ FAQS
 
 */
 
+#questions {
+    animation: slideFromRight 900ms ease;
+}
+
 .questions__container {
     padding: 96px 0;
 }
@@ -988,7 +1174,7 @@ BANNER
 */
 
 #banner {
-    animation: left 900ms ease;
+    animation: slideFromLeft 900ms ease;
 }
 
 .banner__container {
@@ -1067,7 +1253,7 @@ FOOTER
 */
 
 #footer {
-    animation: right 900ms ease;
+    animation: slideFromRight 900ms ease;
 }
 
 .footer__container {
@@ -1159,4 +1345,60 @@ FOOTER
     justify-content: center;
     align-items: center;
     transition: 500ms ease;
+}
+
+
+/*
+
+RESPONSIVENESS - Desktops
+
+*/
+
+@media (max-width: 1024px) {
+    
+    .header__title {
+        font-size: 30px;
+        text-align: center;
+    }
+    
+    .header__row {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .btn__menu {
+        display: block;
+    }
+
+    .nav__links {
+        display: none;
+    }
+
+    .header__img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        max-width: 512px;
+    }
+
+    .header__para {
+        text-align: center;
+    }
+
+    .header__row {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .header__start {
+        max-width: 500px;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .header__button {
+        width: 30%;
+
+    }
 }

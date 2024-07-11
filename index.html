@@ -7,26 +7,56 @@
     <title>Free Modern React Templates & Components for building landing page and UIs</title>
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css">
+    <script src="./index.js"></script>
 </head>
 <body>
     <main>
         <section id="landing">
-            <div class="nav__container row">
-                    <nav>
+            <nav>
+             <div class="nav__container row">
                         <a class="nav__logo--wrapper" href="#">
                             <img class="logo" src="https://treact.owaiskhan.me/static/media/logo.2c489fc453a1783cbadacf914efa3df6.svg" alt="">
                             <h2>Treact</h2>
                         </a>
                         <ul class="nav__links">
-                            <li><a class="nav__link nav__underline" href="#">About</a></li>
-                            <li><a class="nav__link nav__underline" href="#">Blog</a></li>
-                            <li><a class="nav__link nav__underline" href="#">Pricing</a></li>
-                            <li><a class="nav__link nav__underline" href="#footer">Contact us</a></li>
+                            <li><a class="nav__link" href="#features">About</a></li>
+                            <li><a class="nav__link" href="#testimonial">Blog</a></li>
+                            <li><a class="nav__link" href="#pricing">Pricing</a></li>
+                            <li><a class="nav__link" href="#footer">Contact us</a></li>
                             <div class="login">
-                                <li><a class="nav__link nav_underline cursor__not-allowed" href="#">Log in</a></li>
+                                <li><a class="nav__link cursor__not-allowed" href="#">Log in</a></li>
                             </div>
                                 <li><a class="nav__link nav__link--primary cursor__not-allowed" href="#">Sign Up</a></li>
                         </ul>
+
+                        <button class="btn__menu" onclick="openMenu()">
+                            <i class="fa fa-bars" aria-hidden="true"></i>
+                        </button>
+                          <div class="btn__backdrop">
+                            <button class="btn__menu btn__menu--close" onclick="closeMenu()">
+                                <i class="fa fa-times" aria-hidden="true"></i>
+                            </button>
+                            <ul class="menu__links">
+                              <li class="menu__list">
+                                <a href="#" class="menu__link no__cursor" onclick="closeMenu()">About</a>
+                              </li>
+                              <li class="menu__list">
+                                <a href="#" class="menu__link no__cursor" onclick="closeMenu()">Blog</a>
+                              </li>
+                              <li class="menu__list">
+                                <a href="#pricing" class="menu__link" onclick="closeMenu()">Pricing</a>
+                              </li>
+                              <li class="menu__list">
+                                <a href="#footer" class="menu__link" onclick="closeMenu()">Contact Us</a>
+                              </li>
+                              <li class="menu__list">
+                                <a href="#" class="menu__link no__cursor" onclick="closeMenu()">Login</a>
+                              </li>
+                              <li class="menu__list">
+                                <a href="#" class="menu__link menu__link--purple no__cursor" onclick="closeMenu()">Sign Up</a>
+                              </li>
+                            </ul>
+                          </div>
                     </div>
                     </nav>
                     <header>
@@ -42,7 +72,7 @@
                                     </p>
                                     <div class="header__start">
                                         <input class="header__input" type="email" placeholder="Your E-mail Address">
-                                        <button class="header__button button__hover">Get Started</button>
+                                        <button class="header__button button__hover cursor__not-allowed">Get Started</button>
                                     </div>
                                     <div class="header__customers--wrapper">
                                         <p class="header__customers--title">
